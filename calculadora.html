@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+</head>
+<body>
+    <h1>Calculadora.</h1>
+    <strong>Soma: </strong> <input type="number" name="num1" id="num1"> +
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res">Resultado da soma é: </div>
+    <strong>Subtração: </strong> <input type="number" name="nums1" id="nums1"> -
+    <input type="number" name="nums2" id='nums2'>
+    <input type="button" value="Verificar" onclick="subtrai()">
+    <div id="sub">Resultado da subtração é: </div>
+    <script>
+        function clicar() {
+        var n1 = window.document.getElementById('num1')
+        var n2 = window.document.getElementById('num2')
+        var res = window.document.getElementById('res')
+        var nu1 = Number(n1.value)
+        var nu2 = Number(n2.value)
+        s = nu1 + nu2
+        res.innerText = (`O resultado da soma ${s}`)
+        }
+        function subtrai() {
+        var s1 = window.document.getElementById('nums1')
+        var s2 = window.document.getElementById('nums2')
+        var sub = window.document.getElementById('sub')
+        var ns1 = Number(s1.value)
+        var ns2 = Number(s2.value)
+        rsub = ns1 - ns2
+        sub.innerText = (`o resultado da subtração é ${rsub}`)
+        }
+    </script>
+</html>
